@@ -109,8 +109,10 @@ const categoryList = () => {
             });
             if (category === "All") {
                 menuList(menu);
+                document.querySelector("#categoryItemCount").innerHTML = menu.length
             } else {
                 menuList(menuCategory);
+                document.querySelector("#categoryItemCount").innerHTML = menuCategory.length
             }
         });
     });
@@ -143,3 +145,4 @@ const menuList = (menuItems) => {
 
 menuList(menu);
 categoryList();
+document.querySelector("#categoryItemCount").innerHTML = menu.length
